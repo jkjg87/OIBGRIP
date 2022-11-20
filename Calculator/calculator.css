@@ -1,0 +1,42 @@
+header {
+    color: rgb(19, 129, 169);
+    text-align: center;
+}
+h1{
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+table {
+    margin-top: 50px;
+    width: 350px;
+    height: 350px;
+    box-shadow: 10px 10px 70px 10px rgb(152, 144, 144);
+}
+
+tr {
+    width: 350px;
+    height: 75px;
+}
+
+input[type="text"],
+button {
+    width: 95px;
+    height: 75px;
+    font-weight: 400px;
+    font-size: larger;
+    background-color:rgba(147, 147, 236, 0.427);
+    border-width: 0px;
+    padding: 20px;
+    color: rgb(62, 35, 35);
+}
+
+input[type="text"] {
+    width: 350px;
+    text-align: right;
+}
+
+button:hover {
+    background-color: rgb(47, 78, 126);
+    color: rgb(248, 245, 245);
+    transition: 0.1s ease-in-out;
+}

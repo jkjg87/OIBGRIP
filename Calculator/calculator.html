@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Calculator
+    </title>
+    <link rel="stylesheet " href="calculator.css">
+    <script type="text/javascript">
+        function display(v) {
+            document.getElementById("in").value += v;
+        }
+
+        function solve() {
+            var v1 = document.getElementById("in").value;
+            var result = eval(v1);
+            document.getElementById("in").value = result;
+        }
+
+        function reset() {
+            document.getElementById("in").value = " ";
+        }
+
+        function reset_one() {
+            var v1 = document.getElementById("in").value;
+            var len = v1.length;
+            var v2 = v1.substr(0, len - 1);
+            document.getElementById("in").value = v2;
+        }
+
+        function plusminus() {
+            var v1 = document.getElementById("in").value;
+            var len = v1.length;
+
+            if (v1[0] == '-') {
+                var v2 = v1.substr(1, len);
+                document.getElementById("in").value = v2;
+            } else {
+                v1 = "-" + v1;
+                document.getElementById("in").value = v1;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Simple calculator
+        </h1>
+    </header>
+    <table border="1" align="center" cellspacing="0" cellpadding="0">
+        <tr>
+            <td colspan="4"><input type="text" id="in" name="in" readonly></td>
+        </tr>
+        <tr>
+            <td><button value="AC" id="C" onclick="reset()">AC</button></td>
+            <td><button value="C" id="C" onclick="reset_one()">C</button></td>
+            <td><button value="+/-" id="C" onclick="plusminus()">+/-</button></td>
+            <td><button value="/" onclick="display('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button value="7" onclick="display(7)">7</button></td>
+            <td><button value="8" onclick="display(8)">8</button></td>
+            <td><button value="9" onclick="display(9)">9</button></td>
+            <td><button value="*" onclick="display('*')">x</button></td>
+        </tr>
+        <tr>
+            <td><button value="6" onclick="display(6)">6</button></td>
+            <td><button value="5" onclick="display(5)">5</button></td>
+            <td><button value="4" onclick="display(4)">4</button></td>
+            <td><button value="-" onclick="display('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button value="1" onclick="display(1)">1</button></td>
+            <td><button value="2" onclick="display(2)">2</button></td>
+            <td><button value="3" onclick="display(3)">3</button></td>
+            <td><button value="+" onclick="display('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button value="0" onclick="display(0)">0</button></td>
+            <td><button value="%" onclick="display('%')">%</button></td>
+            <td><button value="." onclick="display('.')">.</button></td>
+            <td><button value="equals" onclick="solve('=')">=</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
